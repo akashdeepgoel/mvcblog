@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>
+MVC Blog
+</title>	
+</head>
+<body>
+Welcome {{username}}
+<a href="/create">Create Post</a>
+<a href="/" method="logout">Logout</a>
+{% for post in posts %}
+<h3><a href="/posts/{{post.id}}">{{post.title}}</a></h3>
+<p>{{post.content}}</p>
+<p>By {{post.user}}</p>
+{{post.date}}
+<br>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>
+{{title}}
+</title>	
+</head>
+<body>
+{%for message in message %}
+<li>{{message}}</li>
+{% endfor %}
+<form action="/create" method="POST">
+Title<input type ="text" name="title"><br>
+Message<textarea name="content" cols ="30" rows="10"></textarea>
+<input type="submit" value="Create">
+</form>
+</body>
+</html>
